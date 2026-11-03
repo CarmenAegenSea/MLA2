@@ -1,0 +1,50 @@
+{
+    "点击脑啡肽按钮": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "endorphins/endorphins_begin_button.png",
+                "roi": [354,599,26,28]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": ["点击max图标"]
+    },
+    "点击max图标": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "endorphins/endorphins_max_button.png",
+                "roi": [705,313,39,39]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": ["点击确认图标"]
+    },
+    "点击确认图标": {
+        "recognition": {
+            "type": "OCR",
+            "param":{
+                "roi":[536,448,295,138],
+                "expected": ["Confirm"]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": ["panesWindows"]
+    },
+    "panesWindows": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [20, 20]
+            }
+        }
+
+    }
+}
