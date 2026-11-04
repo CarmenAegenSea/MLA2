@@ -34,19 +34,29 @@
                 "mouse": "PostMessageWithCursorPos", // 鼠标控制方式
                 "keyboard": "PostMessageWithCursorPos" // 键盘控制方式
             }
+        },
+        {
+            "name": "Linux 桌面端",
+            "type": "Linux",
+            "display_short_side": 720,
+            "linux": {
+                "screencap": "PipeWire",
+                "pipewire_source": "Gamescope",
+                "input": "Libei"
+            }
         }
     ],
     "resource": [
         {
             "name": "官服",
             "path": [
-                "./resource"
+                "./resource/base"
             ]
         },
         {
             "name": "B 服",
             "path": [
-                "./resource"
+                "./resource/base"
                 // "./resource_bilibili"
             ]
         }
@@ -60,50 +70,8 @@
     // },
     "task": [
         {
-            "name": "普通任务",
-            "entry": "MyTask1"
-        },
-        {
-            "name": "选项任务",
-            "entry": "MyTask2",
-            "option": [
-                "任务选项1"
-            ]
-        },
-        {
-            "name": "参数任务",
-            "entry": "MyTask3",
-            "option": [
-                "任务选项1"
-            ],
-            "pipeline_override": {}
-        },
-        {
-            "name": "自定义识别与动作示例",
-            "entry": "FindSmallestNumber"
+            "name": "合成脑啡肽",
+            "entry": "endorphins_icon"
         }
-    ],
-    "option": {
-        "任务选项1": {
-            "type": "select",
-            "cases": [
-                {
-                    "name": "文本1",
-                    "pipeline_override": {
-                        "OcrTask": {
-                            "text": "文本1"
-                        }
-                    }
-                },
-                {
-                    "name": "文本2",
-                    "pipeline_override": {
-                        "OcrTask": {
-                            "text": "文本2"
-                        }
-                    }
-                }
-            ]
-        }
-    }
+    ]
 }
