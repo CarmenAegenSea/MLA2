@@ -1,0 +1,41 @@
+{
+    "Permit_icon": {
+        "recognition": {
+            "desc": "通行证图标",
+            "type": "TemplateMatch",
+            "param": {
+                "template": ["permit/permit_icon.png"],
+                "roi": [
+                    901,
+                    148,
+                    360,
+                    165
+                ],
+                "threshold": 0.6
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": ["Task_icon"]
+    },
+    "Task_icon": {
+            "desc": "任务图标",
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    258,
+                    24,
+                    237,
+                    93
+                ],
+                "expected": ["任务", "Task", "任務", "작업"]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": []
+    }
+}

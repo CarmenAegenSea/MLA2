@@ -20,8 +20,8 @@
         "next": ["max_icon"]
     },
     "max_icon": {
+        "desc": "点击最大化图标",
         "recognition": {
-            "desc": "点击最大化图标",
             "type": "TemplateMatch",
             "param": {
                 "template": "endorphins/max_icon.png",
@@ -44,8 +44,13 @@
         "recognition": {
             "type": "OCR",
             "param":{
-                "roi":[640,496,247,84],
-                "expected": ["确认"]
+                "roi":[
+                    640,
+                    496,
+                    247,
+                    84
+                ],
+                "expected": ["确认", "Confirm", "確認", "확인"]
             }
         },
         "action": {
