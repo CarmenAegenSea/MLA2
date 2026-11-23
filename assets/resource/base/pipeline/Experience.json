@@ -1,0 +1,57 @@
+{
+    "Driver_seat": {
+        "desc": "进入驾驶席",
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "expected": ["驾驶席"],
+                "threshold": 0.6
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": ["Experience_icon"]
+    },
+    "Experience_icon": {
+        "desc": "进入采光界面",
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "expected": ["采光"],
+                "threshold": 0.6
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": ["Get_max_sunlight"]
+    },
+    "Get_max_sunlight": {
+        "desc": "找到最大经验采光",
+        "recognition": {
+            "type": "DirectHit"
+        },
+        "action": {
+            "type": "Swipe",
+            "param": {
+                "begin": [1279, 360],
+                "end": [1, 360],
+                "duration": 300
+            }
+        },
+        "next": []
+    }
+}

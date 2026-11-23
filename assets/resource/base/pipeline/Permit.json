@@ -1,7 +1,7 @@
 {
     "Permit_icon": {
+        "desc": "通行证图标",
         "recognition": {
-            "desc": "通行证图标",
             "type": "TemplateMatch",
             "param": {
                 "template": ["permit/permit_icon.png"],
@@ -20,7 +20,7 @@
         "next": ["Task_icon"]
     },
     "Task_icon": {
-            "desc": "任务图标",
+        "desc": "任务图标",
         "recognition": {
             "type": "OCR",
             "param": {
@@ -36,6 +36,63 @@
         "action": {
             "type": "Click"
         },
-        "next": []
+        "next": ["Clear_dailytask1"]
+    },
+    "Clear_dailytask1": {
+        "desc": "清除每日任务1",
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "expected": [""]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": ["Clear_weeklytask"]
+    },
+    "Clear_weeklytask": {
+        "desc": "清除每周任务",
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "expected": [""]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": ["Clear_timelytask"]
+    },
+    "Clear_timelytask": {
+        "desc": "清除每周任务",
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "expected": [""]
+            }
+        },
+        "action": {
+            "type": "Click"
+        }
+        // "next": ["[JumpBack]ReturnMain"]
     }
 }
