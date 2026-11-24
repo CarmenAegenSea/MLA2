@@ -92,12 +92,39 @@
         "action": {
             "type": "Click"
         },
-        "next": ["P_icon","End_icon"]
+        "next": ["P_icon"]
     },
     "P_icon": {
-        "desc": "进入清理周期"
+        "desc": "按P进入清理周期",
+        
+        "action": {
+        "type": "ClickKey",
+        "param": {
+            "key": 80
+        }
+    },
+    "next": ["End_icon","P_icon"]
     },
     "End_icon": {
-        "desc": "结束退出"
+        "desc": "结束退出",
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": ["sumLight/victory.png"],
+                "roi": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "threshold": 0.6
+            }
+        },
+        "action": {
+            "type": "ClickKey",
+            "param": {
+                "key": 32
+            }
+        }
     }
 }
