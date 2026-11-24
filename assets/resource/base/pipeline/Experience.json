@@ -17,9 +17,9 @@
         "action": {
             "type": "Click"
         },
-        "next": ["Experience_icon"]
+        "next": ["SunLight_icon"]
     },
-    "Experience_icon": {
+    "SunLight_icon": {
         "desc": "进入采光界面",
         "recognition": {
             "type": "OCR",
@@ -52,6 +52,52 @@
                 "duration": 300
             }
         },
-        "next": []
+        "next": ["Experience_icon"]
+    },
+    "Experience_icon": {
+        "desc": "点击进入经验关",
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "expected": ["进入"],
+                "threshold": 0.6
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": ["Begin_icon"]
+    },
+    "Begin_icon": {
+        "desc": "开始游戏",
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "expected": ["开始游戏"],
+                "threshold": 0.6
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": ["P_icon","End_icon"]
+    },
+    "P_icon": {
+        "desc": "进入清理周期"
+    },
+    "End_icon": {
+        "desc": "结束退出"
     }
 }
