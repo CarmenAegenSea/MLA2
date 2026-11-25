@@ -92,18 +92,24 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 1000,
         "next": ["P_icon"]
     },
     "P_icon": {
         "desc": "按P进入清理周期",
-        
         "action": {
-        "type": "ClickKey",
-        "param": {
-            "key": 80
-        }
-    },
-    "next": ["End_icon","P_icon"]
+            "type": "ClickKey",
+            "param": {
+                "key": [
+                    80, 
+                    13
+                ]
+            }            
+        },
+        "next": [
+            "End_icon",
+            "P_icon"
+        ]
     },
     "End_icon": {
         "desc": "结束退出",
@@ -114,8 +120,8 @@
                 "roi": [
                     0,
                     0,
-                    0,
-                    0
+                    1280,
+                    720
                 ],
                 "threshold": 0.6
             }

@@ -1,5 +1,6 @@
 {
-    "endorphins_icon": {
+    "Endorphins_icon": {
+        "desc": "点击脑啡肽按钮",
         "recognition": {
             "desc": "合成脑啡肽图标",
             "type": "TemplateMatch",
@@ -17,9 +18,9 @@
         "action": {
             "type": "Click"
         },
-        "next": ["max_icon"]
+        "next": ["Max_icon"]
     },
-    "max_icon": {
+    "Max_icon": {
         "desc": "点击最大化图标",
         "recognition": {
             "type": "TemplateMatch",
@@ -37,9 +38,9 @@
         "action": {
             "type": "Click"
         },
-        "next": ["confirm_icon"]
+        "next": ["Confirm_icon"]
     },
-    "confirm_icon": {
+    "Confirm_icon": {
         "desc": "点击确认按钮",
         "recognition": {
             "type": "OCR",
@@ -56,9 +57,9 @@
         "action": {
             "type": "Click"
         },
-        "next": ["panesWindows"]
+        "next": ["PanesWindows"]
     },
-    "panesWindows": {
+    "PanesWindows": {
         "desc": "点击窗体外回到主界面",
         "action": {
             "type": "Click",
