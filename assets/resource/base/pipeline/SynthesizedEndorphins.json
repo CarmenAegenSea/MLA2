@@ -57,15 +57,6 @@
         "action": {
             "type": "Click"
         },
-        "next": ["PanesWindows"]
-    },
-    "PanesWindows": {
-        "desc": "点击窗体外回到主界面",
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [20, 20]
-            }
-        }
+        "next": ["ReturnMain"]
     }
 }

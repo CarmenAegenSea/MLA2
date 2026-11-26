@@ -1,0 +1,17 @@
+{
+    "ReturnMain": {
+        "desc": "回到玻璃窗",
+        "next": [
+            "PanesWindows"
+        ]
+    },
+    "PanesWindows": {
+        "desc": "点击窗体外回到主界面",
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [20, 20]
+            }
+        }
+    }
+}
