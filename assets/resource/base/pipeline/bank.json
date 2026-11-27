@@ -1,16 +1,34 @@
 {
-    "ReturnMain": {
+    "Bank": {
         "desc": "回到玻璃窗",
         "next": [
-            "PanesWindows"
+            
         ]
     },
-    "PanesWindows": {
-        "desc": "点击窗体外回到主界面",
+    "ClickBank": {
+        "desc": "点击窗体外回到玻璃窗",
         "action": {
             "type": "Click",
             "param": {
                 "target": [20, 20]
+            }
+        }
+    },
+    "EnterBank": {
+        "desc": "Enter回到玻璃窗",
+        "action": {
+            "type": "ClickKey",
+            "param":{
+                "key": []
+            }
+        }
+    },
+    "SpaceBank": {
+        "desc": "Space返回玻璃窗",
+        "action": {
+            "type": "ClickKey",
+            "param": {
+                "key": []
             }
         }
     }

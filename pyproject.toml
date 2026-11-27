@@ -1,0 +1,25 @@
+[project]
+name = "mla"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "CarmenAegenSea", email = "2261689550@qq.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "loguru>=0.8.0",
+    "maaagentbinary>=1.0.1",
+    "maafw>=5.16.1",
+    "pillow>=13.0.0",
+    "pytz>=2026.6",
+    "requests>=2.34.2",
+    "strenum>=0.5.0",
+]
+
+[project.scripts]
+mla = "mla:main"
+
+[build-system]
+requires = ["uv_build>=0.13.6,<0.14.0"]
+build-backend = "uv_build"
