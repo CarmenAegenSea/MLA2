@@ -1,9 +1,12 @@
 {
     "Bank": {
-        "desc": "回到玻璃窗",
-        "next": [
-            
-        ]
+        "desc": "主页回到玻璃窗",
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [830, 660]
+            }
+        }
     },
     "ClickBank": {
         "desc": "点击窗体外回到玻璃窗",
@@ -15,7 +18,18 @@
         }
     },
     "EnterBank": {
-        "desc": "Enter回到玻璃窗",
+        "desc": "Enter",
+        "action": {
+            "type": "ClickKey",
+            "param":{
+                "key": [
+                    13
+                ]
+            }
+        }
+    },
+    "EscBank": {
+        "desc": "Esc",
         "action": {
             "type": "ClickKey",
             "param":{
@@ -24,12 +38,45 @@
         }
     },
     "SpaceBank": {
-        "desc": "Space返回玻璃窗",
+        "desc": "Space",
         "action": {
             "type": "ClickKey",
             "param": {
                 "key": []
             }
         }
+    },
+    "ConfirmBank": {
+        "desc": "点击确认返回玻璃窗",
+        "recognition": {
+            "type": "OCR",
+            "param":{
+                "roi":[
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "expected": ["确认", "Confirm", "確認", "확인"]
+            }
+        },
+        "action": {
+            "type": "Click"
+        }
+    },
+    "EnterContinue": {
+        "desc": "按下Enter并继续",
+        "action": {
+            "type": "ClickKey",
+            "param": {
+                "key": [
+                    28
+                ]
+            }
+        },
+        "next": [
+            "End_icon",
+            "P_icon"
+        ]
     }
 }

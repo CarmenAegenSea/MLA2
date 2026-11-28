@@ -5,10 +5,10 @@
             "type": "OCR",
             "param": {
                 "roi": [
-                    0,
-                    0,
-                    0,
-                    0
+                    935, 
+                    600, 
+                    100, 
+                    100
                 ],
                 "expected": ["驾驶席"],
                 "threshold": 0.6
@@ -25,10 +25,10 @@
             "type": "OCR",
             "param": {
                 "roi": [
-                    0,
-                    0,
-                    0,
-                    0
+                    350, 
+                    70, 
+                    200, 
+                    200
                 ],
                 "expected": ["采光"],
                 "threshold": 0.6
@@ -60,10 +60,10 @@
             "type": "OCR",
             "param": {
                 "roi": [
-                    0,
-                    0,
-                    0,
-                    0
+                    600, 
+                    100, 
+                    700, 
+                    525
                 ],
                 "expected": ["进入"],
                 "threshold": 0.6
@@ -75,17 +75,17 @@
         "next": ["Begin_icon"]
     },
     "Begin_icon": {
-        "desc": "开始游戏",
+        "desc": "开始战斗",
         "recognition": {
             "type": "OCR",
             "param": {
                 "roi": [
-                    0,
-                    0,
-                    0,
-                    0
+                    1000, 
+                    550, 
+                    300, 
+                    75
                 ],
-                "expected": ["开始游戏"],
+                "expected": ["开始战斗"],
                 "threshold": 0.6
             }
         },
@@ -101,18 +101,16 @@
             "type": "ClickKey",
             "param": {
                 "key": [
-                    80, 
-                    13
+                    25
                 ]
             }            
         },
         "next": [
-            "End_icon",
-            "P_icon"
+            "EnterContinue"
         ]
     },
     "End_icon": {
-        "desc": "结束退出",
+        "desc": "结束结算",
         "recognition": {
             "type": "TemplateMatch",
             "param": {
@@ -120,8 +118,8 @@
                 "roi": [
                     0,
                     0,
-                    1280,
-                    720
+                    0,
+                    0
                 ],
                 "threshold": 0.6
             }
@@ -131,6 +129,9 @@
             "param": {
                 "key": 32
             }
-        }
+        },
+        "next": [
+            "ConfirmBank"
+        ]
     }
 }

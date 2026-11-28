@@ -54,16 +54,16 @@
             ]
         }
     ],
-    "agent": {
-        "child_exec": "python",
-        "child_args": [
-            "./agent/main.py"
-        ]
-    },
+    // "agent": {
+    //     "child_exec": "python",
+    //     "child_args": [
+    //         "./agent/main.py"
+    //     ]
+    // },
     "task": [
         {
             "name": "合成脑啡肽",
-            "entry": "Endorphins_icon"
+            "entry": "SynthesizedEndorphins"
         },
         {
             "name": "经验采光",

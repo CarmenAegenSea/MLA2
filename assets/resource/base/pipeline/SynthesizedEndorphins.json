@@ -1,4 +1,10 @@
 {
+    "SynthesizedEndorphins": {
+        "desc": "合成脑啡肽",
+        "next": [
+            "Endorphins_icon"
+        ]
+    },
     "Endorphins_icon": {
         "desc": "点击脑啡肽按钮",
         "recognition": {
@@ -7,11 +13,12 @@
             "param": {
                 "template": "endorphins/endorphins_icon.png",
                 "roi": [
-                    4,
-                    608,
-                    712,
-                    108
+                    240,
+                    550, 
+                    200, 
+                    200
                 ],
+                "method": 5,
                 "threshold": 0.6
             }
         },
@@ -27,10 +34,10 @@
             "param": {
                 "template": "endorphins/max_icon.png",
                 "roi": [
-                    767,
-                    298,
-                    79,
-                    71
+                    700, 
+                    280, 
+                    200, 
+                    100
                 ],
                 "threshold": 0.6
             }
@@ -38,25 +45,6 @@
         "action": {
             "type": "Click"
         },
-        "next": ["Confirm_icon"]
-    },
-    "Confirm_icon": {
-        "desc": "点击确认按钮",
-        "recognition": {
-            "type": "OCR",
-            "param":{
-                "roi":[
-                    640,
-                    496,
-                    247,
-                    84
-                ],
-                "expected": ["确认", "Confirm", "確認", "확인"]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": []
+        "next": ["ConfirmBank"]
     }
 }
